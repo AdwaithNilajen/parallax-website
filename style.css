@@ -1,0 +1,426 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+
+
+
+  /* Navbar */
+.navbar {
+  background: rgba(0, 0, 0, 0.6); 
+  transition: background 0.3s ease;
+}
+ 
+/* Logo */
+.logo {
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.8); 
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff; 
+}
+
+.nav-link:hover {
+  color: #f4c542; 
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #f4c542; 
+}
+
+.navbar-brand:hover {
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+  
+  /* Parallax Sections */
+  .parallax {
+    position: relative;
+    height: 100vh; 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+  }
+  
+  #forest1 {
+    background-image: url('./images/forest\ 1.jpg');
+  }
+
+#forest1 .content h1 {
+  opacity: 0.7;
+  font-weight: 700;
+  position: relative;
+  animation: sway 6s infinite alternate ease-in-out;
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+#forest1 .content p {
+  position: relative;
+  animation: swaySlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes swaySlow {
+  0% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+
+#forest1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+  url('./images/fog_5.png') no-repeat center center / cover, 
+  url('./images/sun_rays.png') no-repeat center center / cover;
+  opacity: 0.5;
+  z-index: 1; 
+}
+
+
+/* About Us Parallax Section */
+.parallax.about-us {
+  position: relative;
+  background-image: url('./images/background.png'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.parallax.about-us::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+}
+
+
+#about-us::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./images/sun_rays.png') no-repeat center center / cover;
+  opacity: 0.5;
+  z-index: 2; 
+}
+
+.parallax.about-us .content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.parallax.about-us h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.parallax.about-us p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#about-us .content h1 {
+  opacity: 0.6;
+  font-weight: 500;
+  position: relative;
+  animation: sway 6s infinite alternate ease-in-out;
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+#about-us .content p {
+  position: relative;
+  animation: swaySlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes swaySlow {
+  0% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+
+  
+  
+  
+  #forest2 {
+    background-image: url('./images/forest\ 2.jpg');
+  }
+
+#forest2 .content h1 {
+  position: relative;
+  animation: sway 6s infinite alternate ease-in-out;
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+#forest2 .content p {
+  position: relative;
+  animation: swaySlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes swaySlow {
+  0% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+
+
+
+
+#forest2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./images/fog_4.png') no-repeat center center / cover;
+  opacity: 0.5;
+  z-index: 2; 
+}
+
+
+
+
+
+
+
+  
+  #forest3 {
+    background-image: url('./images/forest\ 3.jpg');
+  }
+
+
+#forest3 .content h1 {
+  position: relative;
+  animation: sway 6s infinite alternate ease-in-out;
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(30px);
+  }
+}
+
+#forest3 .content p {
+
+  position: relative;
+  animation: swaySlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes swaySlow {
+  0% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
+}
+
+  
+  .parallax .content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+  }
+  
+  .parallax h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  
+  .parallax p {
+    font-size: 3rem;
+    font-weight: 500;
+    opacity: 0.5;
+  }
+  
+  /* Content Sections */
+  .content-section {
+    position: relative;
+    overflow: hidden;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  
+  
+  .content-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .content-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #34495e;
+  }
+
+.falling-leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events:none; 
+  overflow: hidden;
+  z-index: 1; 
+}
+
+.falling-leaves::before,
+.falling-leaves::after {
+  content: "🍃 🍂 🍁"; 
+  position: absolute;
+  animation: fall 12s linear infinite;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.3); 
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100%) rotate(0deg);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(100%) rotate(360deg);
+    opacity: 0.5;
+  }
+}
+
+  
+  
+.footer {
+  background: #2c3e50; 
+  color: #ecf0f1; 
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+
+.footer h5 {
+  border-bottom: 2px solid #1abc9c; 
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer ul li {
+  margin-bottom: 10px; 
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #1abc9c; 
+}
+
+
